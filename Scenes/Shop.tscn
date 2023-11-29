@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://x5ryah5aryuw"]
 
-[ext_resource type="Script" path="res://Script/Shop.gd" id="1_gbnhl"]
-[ext_resource type="Script" path="res://Script/ShopItemScript.gd" id="2_5mia0"]
+[ext_resource type="Script" path="res://Scripts/Shop.gd" id="1_gbnhl"]
+[ext_resource type="Script" path="res://Scripts/ShopItemScript.gd" id="2_5mia0"]
 [ext_resource type="Texture2D" uid="uid://r8qafpvy8sio" path="res://Assets/star.png" id="2_j50ud"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inx3d"]

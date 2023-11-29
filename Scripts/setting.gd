@@ -3,7 +3,7 @@ extends Node
 var isSoundOn = true
 var textSizeInPoints = 12
 var contrastLevel = 1.0
-@onready var global_state = preload("res://GlobalState.gd").new()
+@onready var global_state = preload("res://Scripts/GlobalState.gd").new()
 signal settings_button_pressed
 
 # Called when the node enters the scene tree for the first time.

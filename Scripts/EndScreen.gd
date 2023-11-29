@@ -57,10 +57,9 @@ func getStarCount(time : float, levelIndex : int):
 
 func continueButton():
 	#TODO: Change logic to point to next level/main menu
-	get_tree().change_scene_to_file("res://Scenes/Main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
 
 
 func quitButton():
-	#TODO: CHange logic to point to levelselect
-	get_tree().change_scene_to_file("res://Scenes/Leaderboard.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 

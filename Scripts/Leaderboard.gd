@@ -80,5 +80,4 @@ func loadAsJSON(path : String, default : Array) -> Array:
 
 
 func BackButton():
-	#TODO: Change logic to point to main menu
-	get_tree().change_scene_to_file("res://Scenes/Main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

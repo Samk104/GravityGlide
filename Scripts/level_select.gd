@@ -1,5 +1,5 @@
 extends Control
-const LEVEL_BTN=preload("res://level_btn.tscn")
+const LEVEL_BTN=preload("res://Scenes/level_btn.tscn")
 @export_dir var dir_path
 @onready var grid= $MarginContainer/VBoxContainer/GridContainer
 
@@ -39,8 +39,8 @@ func create_level_btn(level_path:String,level_name:String)-> void:
 
 
 func _on_settings_pressed():
-	get_tree().change_scene_to_file("res://Settings.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Settings.tscn")
 
 
 func _on_level_select_backbtn_pressed():
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

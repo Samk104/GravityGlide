@@ -10,7 +10,8 @@ func _physics_process(delta):
 	#Gravity for cat alien
 	velocity.y += gravity * delta
 	if chase == true:
-		player = get_node("../../Player/Player")
+		#player = get_node("../../Player/Player")
+		player = $"../../Player"#get_node("play")
 		var direction = (player.position - self.position).normalized()
 		if direction.x > 0:
 			get_node("AnimatedSprite2D").flip_h = true

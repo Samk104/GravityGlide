@@ -1,13 +1,13 @@
 [gd_scene load_steps=13 format=3 uid="uid://chx4k3o8gounp"]
 
 [ext_resource type="Texture2D" uid="uid://xn8e03s5lgyv" path="res://Assets/tileset-3.png" id="1_efg4e"]
-[ext_resource type="PackedScene" uid="uid://dbmy6r2to4kh5" path="res://Scene/player.tscn" id="1_ja6lb"]
 [ext_resource type="Texture2D" uid="uid://xs0i5xv8kbnd" path="res://Assets/tile2.jpg" id="2_0tayc"]
 [ext_resource type="Texture2D" uid="uid://cnhmvkl1yngpv" path="res://Assets/tile1.jpg" id="3_bwrhp"]
-[ext_resource type="Script" path="res://Script/BG.gd" id="4_1bxko"]
+[ext_resource type="Script" path="res://Scripts/BG.gd" id="4_1bxko"]
 [ext_resource type="Texture2D" uid="uid://biena3sbbsaq5" path="res://Assets/Backgrounds/background.jpg" id="5_15258"]
 [ext_resource type="Texture2D" uid="uid://cyocsn4fyxqw7" path="res://Assets/planet.png" id="6_1fqy3"]
-[ext_resource type="PackedScene" uid="uid://ckoalqga84e6a" path="res://Scene/cat_alien.tscn" id="8_g6fca"]
+[ext_resource type="PackedScene" uid="uid://bksraduscpujd" path="res://Scenes/NewPlayer.tscn" id="8_64pfu"]
+[ext_resource type="PackedScene" uid="uid://ckoalqga84e6a" path="res://Scenes/cat_alien.tscn" id="8_g6fca"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67hne"]
 texture = ExtResource("1_efg4e")
@@ -74001,15 +74001,10 @@ position = Vector2(977, 206)
 scale = Vector2(0.0209112, 0.020423)
 texture = ExtResource("6_1fqy3")
 
-[node name="Player" type="Node2D" parent="."]
-
-[node name="Player" parent="Player" instance=ExtResource("1_ja6lb")]
-position = Vector2(57, 268)
-
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="cat_alien" parent="Mobs" instance=ExtResource("8_g6fca")]
-position = Vector2(226, 336)
+position = Vector2(514, 385)
 
 [node name="cat_alien2" parent="Mobs" instance=ExtResource("8_g6fca")]
 position = Vector2(1316, 308)
@@ -74025,3 +74020,6 @@ position = Vector2(1039, 304)
 
 [node name="cat_alien5" parent="Mobs" instance=ExtResource("8_g6fca")]
 position = Vector2(752, 297)
+
+[node name="Player" parent="." instance=ExtResource("8_64pfu")]
+position = Vector2(136, 93)
