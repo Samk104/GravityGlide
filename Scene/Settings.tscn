@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsq2kd5o5w13c"]
+
+[ext_resource type="Script" path="res://Script/setting.gd" id="1_3gtbu"]
+
+[node name="settings_Layout" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3gtbu")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 644.0
+color = Color(0.12549, 0.137255, 0.294118, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -328.5
+offset_top = 23.0
+offset_right = 324.5
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1025.0
+offset_top = 23.0
+offset_right = 1127.0
+offset_bottom = 70.0
+text = "Exit"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 128.0
+offset_top = 95.0
+offset_right = 617.0
+offset_bottom = 317.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Sound"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer2/HBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+rounded = true
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="MarginContainer2/HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="value_changed" from="MarginContainer2/HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]

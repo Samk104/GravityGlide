@@ -1,0 +1,99 @@
+[gd_scene load_steps=3 format=3 uid="uid://0f1ow37k7osj"]
+
+[ext_resource type="Script" path="res://Script/level_select.gd" id="1_8c2nd"]
+[ext_resource type="Texture2D" uid="uid://b48gme7aadfi1" path="res://Assets/Backgrounds/Runway 2023-11-22T01_50_30.531Z Image Variation-fotor-20231126193255.jpg" id="1_cnmd2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8c2nd")
+dir_path = "res://levels"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.4, 0.588235, 0.607843, 1)
+
+[node name="Runway2023-11-22t015030_531zImageVariation-fotor-20231126193255" type="Sprite2D" parent="ColorRect"]
+position = Vector2(576, 184)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_cnmd2")
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 116.0
+offset_right = 1040.0
+offset_bottom = 644.0
+color = Color(1, 1, 1, 0.498039)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 128.0
+offset_right = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 3
+
+[node name="level_select_backbtn" type="Button" parent="."]
+layout_mode = 1
+offset_left = 72.0
+offset_top = 56.0
+offset_right = 152.0
+offset_bottom = 87.0
+text = "Back"
+
+[node name="settings" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.993
+anchor_bottom = 1.0
+offset_left = 960.0
+offset_top = 40.0
+offset_right = -53.936
+offset_bottom = -566.0
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="Label" type="Label" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 24.0
+offset_right = 43.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.0823529, 0.376471, 1)
+theme_override_font_sizes/font_size = 60
+text = "Select A Level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="level_select_backbtn" to="." method="_on_level_select_backbtn_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]

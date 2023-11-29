@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://x5ryah5aryuw"]
+
+[ext_resource type="Script" path="res://Script/Shop.gd" id="1_gbnhl"]
+[ext_resource type="Script" path="res://Script/ShopItemScript.gd" id="2_5mia0"]
+[ext_resource type="Texture2D" uid="uid://r8qafpvy8sio" path="res://Assets/star.png" id="2_j50ud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inx3d"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gbnhl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Item1" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
+script = ExtResource("2_5mia0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Item1"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ItemTitle" type="Label" parent="HBoxContainer/Item1/VBoxContainer"]
+layout_mode = 2
+text = "First Item"
+
+[node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item1/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+texture = ExtResource("2_j50ud")
+expand_mode = 1
+
+[node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item1/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="StarSymbol" type="TextureRect" parent="HBoxContainer/Item1/VBoxContainer/Pricetag"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_j50ud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StarPrice" type="Label" parent="HBoxContainer/Item1/VBoxContainer/Pricetag"]
+layout_mode = 2
+text = "0/8"
+
+[node name="ItemButton" type="Button" parent="HBoxContainer/Item1/VBoxContainer"]
+layout_mode = 2
+text = "Equip"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Back"
+
+[connection signal="pressed" from="HBoxContainer/Item1/VBoxContainer/ItemButton" to="HBoxContainer/Item1" method="onEquip"]
+[connection signal="pressed" from="BackButton" to="." method="backButton"]

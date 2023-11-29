@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5hpgl4qvbqel"]
+
+[ext_resource type="Texture2D" uid="uid://biena3sbbsaq5" path="res://Assets/Backgrounds/background.jpg" id="1_oc5gj"]
+[ext_resource type="Script" path="res://Script/BG.gd" id="1_oxo3q"]
+[ext_resource type="Texture2D" uid="uid://cyocsn4fyxqw7" path="res://Assets/planet.png" id="3_bf160"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_oxo3q")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1150, 2.08165e-12)
+
+[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(577.25, 323)
+scale = Vector2(0.1645, 0.2568)
+texture = ExtResource("1_oc5gj")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1056, 2.08165e-12)
+
+[node name="Planet2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(530, 282)
+scale = Vector2(0.0209112, 0.020423)
+texture = ExtResource("3_bf160")
+
+[node name="Planet4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(175, 171)
+scale = Vector2(0.0209112, 0.020423)
+texture = ExtResource("3_bf160")
+
+[node name="Planet6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(977, 206)
+scale = Vector2(0.0209112, 0.020423)
+texture = ExtResource("3_bf160")
