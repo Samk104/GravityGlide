@@ -1,0 +1,39 @@
+1. Maneuvering objects using the device’s gyroscope 50%
+2. Leaderboard and best time record 100%
+3. Creating the reward system based on scores and ratings
+
+
+
+V End Level Screen
+	"Congratz bud"
+	Stars
+	Time required for each star
+	Time taken
+	Leaderboard snippet
+		Top 3
+		Higher 2
+		Current
+		Lower
+	Continue Button
+	Quit (To level select) button
+	
+Shop Screen
+	V Exit button at top right
+	V Four items: Name, Image, Equip Button
+	Skin, ?, Rainbow trail, ?
+	8 stars, 16 stars, 20 stars, 24 stars
+
+Document/type all functions others will use
+#https://www.gdquest.com/tutorial/godot/gdscript/typed-gdscript/
+
+Need to load items on game startup
+
+
+Leaderboard Screen
+	Add all 8 tabs
+	Logic
+	
+Better Player Controller
+	Limit to "Anti-grav"?
+
+'#TODO:' tags
