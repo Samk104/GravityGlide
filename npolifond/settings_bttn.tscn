@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dxtlvrio18ad8"]
+
+[node name="settingsBttn" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Settings"
