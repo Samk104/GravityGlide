@@ -20,7 +20,7 @@ func _on_cont_game_pressed():
 
 
 func _on_new_game_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/NewPlayer.tscn")
 
 
 func _on_view_control_pressed():
@@ -28,7 +28,7 @@ func _on_view_control_pressed():
 
 
 func _on_leader_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/Leaderboard.tscn")
 
 
 func _on_settings_pressed() -> void:
@@ -37,7 +37,7 @@ func _on_settings_pressed() -> void:
 
 
 func _on_reward_store_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/Shop.tscn")
 
 
 func _on_quit_pressed():
