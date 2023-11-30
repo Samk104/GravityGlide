@@ -17,14 +17,19 @@ func _on_check_button_toggled(_button_pressed):
 		print("false")
 		_disable_audio_feature()
 	else: 
-		print("True")
+		print("true")
+		_enable_audio_feature()
 	
 	
 func _disable_audio_feature():
 	_audio_slider.set_process_input(false)
+	_audio_slider.editable=false
 	_sound_text.modulate =Color(1, 1, 1,.05)
 		
-
+func _enable_audio_feature():
+	_audio_slider.set_process_input(true)
+	_audio_slider.editable=true
+	_sound_text.modulate =Color(250, 250, 1,)
 
 func _on_h_slider_value_changed(_value):
 	print("Slider value changed:",_value)
