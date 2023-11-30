@@ -9,11 +9,6 @@ func _ready():
 #	print(global_state.get_current_page())
 	pass
 
-
-
-
-
-
 func _on_cont_game_pressed():
 	get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
 
@@ -32,8 +27,8 @@ func _on_leader_pressed():
 
 
 func _on_settings_pressed() -> void:
-	emit_signal("settings_button_pressed")
-	#get_tree().change_scene(settings_scene)
+	get_tree().change_scene_to_file("res://Scenes/Settings.tscn")
+	
 
 
 func _on_reward_store_pressed():

@@ -1,36 +1,48 @@
 extends Node
 
-var isSoundOn = true
-var textSizeInPoints = 12
-var contrastLevel = 1.0
-@onready var global_state = preload("res://Scripts/GlobalState.gd").new()
+var _sound_text: Label
+var _audio_slider :Slider
+
 signal settings_button_pressed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	_sound_text= $CanvasLayer/HBoxContainer/Label2
+	_audio_slider=$CanvasLayer/HBoxContainer/HSlider
 
 
 
-
-func toggleSound():
-	isSoundOn = !isSoundOn
+func _on_check_button_toggled(_button_pressed):
+	if _button_pressed == false:
+		print("false")
+		_disable_audio_feature()
+	else: 
+		print("True")
 	
+	
+func _disable_audio_feature():
+	_audio_slider.set_process_input(false)
+	_sound_text.modulate =Color(1, 1, 1,.05)
+		
 
 
-func _on_check_button_toggled():
-	#button_pressed)
-	pass # Replace with function body.
+func _on_h_slider_value_changed(_value):
+	print("Slider value changed:",_value)
 
 
-func _on_h_slider_value_changed():
-	#value
-	pass # Replace with function body.
 
 
 func _on_button_pressed():
-	emit_signal("settings_button_pressed")
-	var previous_page = global_state.get_current_page()
-	global_state.set_current_page("")  # Reset current page
-	get_tree().change_scene(previous_page)
-	queue_free()
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+
+
+func _on_text_decrease_pressed():
+	pass # Replace with function body.
+
+
+func _on_normal_text_pressed():
+	pass # Replace with function body.
+
+
+func _on_text_increase_pressed():
+	pass # Replace with function body.

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bg2hckl16bqcu"]
+[gd_scene load_steps=4 format=3 uid="uid://bg2hckl16bqcu"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_rrc4s"]
 [ext_resource type="PackedScene" uid="uid://b5hpgl4qvbqel" path="res://Scenes/BG.tscn" id="1_wdumw"]
+[ext_resource type="AudioStream" uid="uid://b5lubrp6em67k" path="res://Assets/8bit-music-for-game-68698.mp3" id="3_yl8kc"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -113,6 +114,11 @@ offset_right = 104.0
 offset_bottom = 257.0
 text = "Quit
 "
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yl8kc")
+volume_db = -25.0
+autoplay = true
 
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxContainer/contGame" to="." method="_on_cont_game_pressed"]

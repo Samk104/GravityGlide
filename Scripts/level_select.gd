@@ -3,15 +3,14 @@ const LEVEL_BTN=preload("res://Scenes/level_btn.tscn")
 @export_dir var dir_path
 @onready var grid= $MarginContainer/VBoxContainer/GridContainer
 
-#@onready var global_state = preload("res://GlobalState.gd").new()
 
 
 func _ready():
+	#Gets directory
 	getLevels(dir_path)
-	#print(global_state.get_current_page())
-
 func getLevels(path) -> void:
 	var dir := DirAccess.open(path)
+	#List all the file names and creates a buttun for each
 	if dir:
 		dir.list_dir_begin()
 		var file_name= dir.get_next()
@@ -24,6 +23,7 @@ func getLevels(path) -> void:
 		print('Error occured when accessing the path')
 		
 		
+		#creates a buttun places it in the grid veiw and edit the display name
 func create_level_btn(level_path:String,level_name:String)-> void:
 	var btn = LEVEL_BTN.instantiate()
 	btn.text = level_name.trim_suffix(".tscn")
@@ -32,10 +32,6 @@ func create_level_btn(level_path:String,level_name:String)-> void:
 	pass
 
 
-# Called when the node enters the scene tree for the first time.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 
 
 func _on_settings_pressed():

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsq2kd5o5w13c"]
+[gd_scene load_steps=3 format=3 uid="uid://bsq2kd5o5w13c"]
 
 [ext_resource type="Script" path="res://Scripts/setting.gd" id="1_3gtbu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wtgyw"]
 
 [node name="settings_Layout" type="Control"]
 layout_mode = 3
@@ -14,13 +16,16 @@ grow_vertical = 2
 script = ExtResource("1_3gtbu")
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 644.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 128.0
+offset_top = 70.0
+offset_right = 1024.0
+offset_bottom = 479.0
 color = Color(0.12549, 0.137255, 0.294118, 1)
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -35,36 +40,92 @@ text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="ColorRect"]
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect"]
 layout_mode = 0
-offset_left = 1025.0
-offset_top = 23.0
-offset_right = 1127.0
-offset_bottom = 70.0
+offset_left = 755.0
+offset_top = 25.0
+offset_right = 857.0
+offset_bottom = 72.0
 text = "Exit"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 2
-offset_left = 128.0
-offset_top = 95.0
-offset_right = 617.0
-offset_bottom = 317.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+offset_left = 320.0
+offset_top = 222.0
+offset_right = 832.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
 
-[node name="CheckButton" type="CheckButton" parent="HBoxContainer"]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="HBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Sound"
 
-[node name="HSlider" type="HSlider" parent="HBoxContainer"]
+[node name="VSeparator3" type="VSeparator" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wtgyw")
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+button_pressed = true
+
+[node name="VSeparator4" type="VSeparator" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wtgyw")
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/HBoxContainer"]
 layout_direction = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 rounded = true
 
-[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
-[connection signal="toggled" from="HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
-[connection signal="value_changed" from="HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 320.0
+offset_top = 310.0
+offset_right = 832.0
+offset_bottom = 374.0
+
+[node name="TextSize" type="Label" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Text Size "
+
+[node name="VSeparator3" type="VSeparator" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 30
+theme_override_styles/separator = SubResource("StyleBoxEmpty_wtgyw")
+
+[node name="TextDecrease" type="Button" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-A"
+
+[node name="VSeparator2" type="VSeparator" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="NormalText" type="Button" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A"
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TextIncrease" type="Button" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+A"
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="CanvasLayer/HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="value_changed" from="CanvasLayer/HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer2/TextDecrease" to="." method="_on_text_decrease_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer2/NormalText" to="." method="_on_normal_text_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer2/TextIncrease" to="." method="_on_text_increase_pressed"]
