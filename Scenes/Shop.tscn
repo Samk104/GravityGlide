@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://x5ryah5aryuw"]
+[gd_scene load_steps=8 format=3 uid="uid://x5ryah5aryuw"]
 
 [ext_resource type="Script" path="res://Scripts/Shop.gd" id="1_gbnhl"]
 [ext_resource type="Script" path="res://Scripts/ShopItemScript.gd" id="2_5mia0"]
 [ext_resource type="Texture2D" uid="uid://r8qafpvy8sio" path="res://Assets/star.png" id="2_j50ud"]
+[ext_resource type="Texture2D" uid="uid://cxy05ep3k1g7l" path="res://Assets/Items/NewSkin.png" id="3_ustxm"]
+[ext_resource type="Texture2D" uid="uid://bgrhrvx3f2otu" path="res://Assets/Items/RainbowTrail.png" id="4_6cob0"]
+[ext_resource type="Texture2D" uid="uid://cvn2xdr4bpqdf" path="res://Assets/Items/Glow.png" id="5_q2wde"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inx3d"]
 content_margin_left = 10.0
@@ -37,19 +40,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
 script = ExtResource("2_5mia0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Item1"]
+custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
 [node name="ItemTitle" type="Label" parent="HBoxContainer/Item1/VBoxContainer"]
 layout_mode = 2
-text = "First Item"
+text = "New skin"
+horizontal_alignment = 1
 
 [node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item1/VBoxContainer"]
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
-texture = ExtResource("2_j50ud")
+texture = ExtResource("3_ustxm")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item1/VBoxContainer"]
 layout_mode = 2
@@ -70,6 +76,144 @@ text = "0/8"
 layout_mode = 2
 text = "Equip"
 
+[node name="Item2" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
+script = ExtResource("2_5mia0")
+itemIndex = 1
+starPrice = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Item2"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ItemTitle" type="Label" parent="HBoxContainer/Item2/VBoxContainer"]
+layout_mode = 2
+text = "Star Skin"
+horizontal_alignment = 1
+
+[node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+texture = ExtResource("2_j50ud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item2/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="StarSymbol" type="TextureRect" parent="HBoxContainer/Item2/VBoxContainer/Pricetag"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_j50ud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StarPrice" type="Label" parent="HBoxContainer/Item2/VBoxContainer/Pricetag"]
+layout_mode = 2
+text = "0/8"
+
+[node name="ItemButton" type="Button" parent="HBoxContainer/Item2/VBoxContainer"]
+layout_mode = 2
+text = "Equip"
+
+[node name="Item3" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
+script = ExtResource("2_5mia0")
+itemIndex = 2
+starPrice = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Item3"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ItemTitle" type="Label" parent="HBoxContainer/Item3/VBoxContainer"]
+layout_mode = 2
+text = "Trail"
+horizontal_alignment = 1
+
+[node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+texture = ExtResource("4_6cob0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item3/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="StarSymbol" type="TextureRect" parent="HBoxContainer/Item3/VBoxContainer/Pricetag"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_j50ud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StarPrice" type="Label" parent="HBoxContainer/Item3/VBoxContainer/Pricetag"]
+layout_mode = 2
+text = "0/8"
+
+[node name="ItemButton" type="Button" parent="HBoxContainer/Item3/VBoxContainer"]
+layout_mode = 2
+text = "Equip"
+
+[node name="Item4" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
+script = ExtResource("2_5mia0")
+itemIndex = 3
+starPrice = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Item4"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ItemTitle" type="Label" parent="HBoxContainer/Item4/VBoxContainer"]
+layout_mode = 2
+text = "Glow"
+horizontal_alignment = 1
+
+[node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+texture = ExtResource("5_q2wde")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item4/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="StarSymbol" type="TextureRect" parent="HBoxContainer/Item4/VBoxContainer/Pricetag"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_j50ud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StarPrice" type="Label" parent="HBoxContainer/Item4/VBoxContainer/Pricetag"]
+layout_mode = 2
+text = "0/8"
+
+[node name="ItemButton" type="Button" parent="HBoxContainer/Item4/VBoxContainer"]
+layout_mode = 2
+text = "Equip"
+
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 1
@@ -81,4 +225,7 @@ grow_horizontal = 0
 text = "Back"
 
 [connection signal="pressed" from="HBoxContainer/Item1/VBoxContainer/ItemButton" to="HBoxContainer/Item1" method="onEquip"]
+[connection signal="pressed" from="HBoxContainer/Item2/VBoxContainer/ItemButton" to="HBoxContainer/Item2" method="onEquip"]
+[connection signal="pressed" from="HBoxContainer/Item3/VBoxContainer/ItemButton" to="HBoxContainer/Item3" method="onEquip"]
+[connection signal="pressed" from="HBoxContainer/Item4/VBoxContainer/ItemButton" to="HBoxContainer/Item4" method="onEquip"]
 [connection signal="pressed" from="BackButton" to="." method="backButton"]

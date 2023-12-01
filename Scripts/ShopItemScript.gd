@@ -20,10 +20,8 @@ func _ready():
 
 func onEquip():
 	var global = Global.new()
-	if (global.Items[itemIndex]):
-		return
 	
-	global.Items[itemIndex] = true
+	global.Items[itemIndex] = not global.Items[itemIndex]
 	leaderboard.saveAsJSON(global.Items, global.ItemPath)
-	$VBoxContainer/ItemButton.disabled = true
-	$VBoxContainer/ItemButton.text = "Equipped"
+	#$VBoxContainer/ItemButton.disabled = true
+	$VBoxContainer/ItemButton.text = "Equipped" if global.Items[itemIndex] else "Equip"
