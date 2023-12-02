@@ -49,7 +49,6 @@ offset_bottom = 72.0
 text = "Exit"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-anchors_preset = -1
 offset_left = 320.0
 offset_top = 222.0
 offset_right = 832.0

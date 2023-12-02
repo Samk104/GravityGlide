@@ -15,6 +15,14 @@ run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://Assets/Items/default_bus_layout.tres"
+
+[autoload]
+
+GlobalAudio="*res://Scenes/GlobalAudio.tscn"
+
 [display]
 
 window/size/initial_position_type=2

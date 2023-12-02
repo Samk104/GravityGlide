@@ -7,6 +7,7 @@ const LEVEL_BTN=preload("res://Scenes/level_btn.tscn")
 
 func _ready():
 	#Gets directory
+	GlobalAudio.play_music()
 	getLevels(dir_path)
 func getLevels(path) -> void:
 	var dir := DirAccess.open(path)

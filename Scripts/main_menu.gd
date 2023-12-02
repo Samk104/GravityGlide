@@ -22,10 +22,6 @@ func _on_view_control_pressed():
 	pass # Replace with function body.
 
 
-func _on_leader_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Leaderboard.tscn")
-
-
 func _on_settings_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Settings.tscn")
 	
