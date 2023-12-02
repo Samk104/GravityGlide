@@ -9,6 +9,8 @@ func _ready():
 	#Gets directory
 	GlobalAudio.play_music()
 	getLevels(dir_path)
+	
+	
 func getLevels(path) -> void:
 	var dir := DirAccess.open(path)
 	#List all the file names and creates a buttun for each

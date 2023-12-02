@@ -25,7 +25,7 @@ offset_right = 1024.0
 offset_bottom = 479.0
 color = Color(0.12549, 0.137255, 0.294118, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect" groups=["UI_Element"]]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -40,7 +40,7 @@ text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/ColorRect"]
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect" groups=["UI_Element"]]
 layout_mode = 0
 offset_left = 755.0
 offset_top = 25.0
@@ -57,7 +57,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
-[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer" groups=["UI_Element"]]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Sound"
@@ -90,7 +90,7 @@ offset_top = 310.0
 offset_right = 832.0
 offset_bottom = 374.0
 
-[node name="TextSize" type="Label" parent="CanvasLayer/HBoxContainer2"]
+[node name="TextSize" type="Label" parent="CanvasLayer/HBoxContainer2" groups=["UI_Element"]]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Text Size "
@@ -100,7 +100,7 @@ layout_mode = 2
 theme_override_constants/separation = 30
 theme_override_styles/separator = SubResource("StyleBoxEmpty_wtgyw")
 
-[node name="TextDecrease" type="Button" parent="CanvasLayer/HBoxContainer2"]
+[node name="TextDecrease" type="Button" parent="CanvasLayer/HBoxContainer2" groups=["UI_Element"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-A"
@@ -109,7 +109,7 @@ text = "-A"
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="NormalText" type="Button" parent="CanvasLayer/HBoxContainer2"]
+[node name="NormalText" type="Button" parent="CanvasLayer/HBoxContainer2" groups=["UI_Element"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "A"
@@ -118,7 +118,7 @@ text = "A"
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="TextIncrease" type="Button" parent="CanvasLayer/HBoxContainer2"]
+[node name="TextIncrease" type="Button" parent="CanvasLayer/HBoxContainer2" groups=["UI_Element"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "+A"

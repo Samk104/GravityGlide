@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfvsxb7s0sb1r"]
+[gd_scene load_steps=3 format=3 uid="uid://b4qdjjr3vfi7k"]
 
 [ext_resource type="AudioStream" uid="uid://b5lubrp6em67k" path="res://Assets/8bit-music-for-game-68698.mp3" id="1_ywjm5"]
 [ext_resource type="Script" path="res://Scripts/GlobalAudio.gd" id="2_civlw"]
