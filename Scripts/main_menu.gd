@@ -33,4 +33,5 @@ func _on_reward_store_pressed():
 
 
 func _on_quit_pressed():
+	GlobalAudio.stop_music()
 	get_tree().quit()

@@ -57,6 +57,7 @@ func _enable_audio_feature():
 	GlobalAudio.play_music()
 
 func _on_h_slider_value_changed(value):
+	
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
 	# Store the value for future use
 	_value = value
@@ -66,17 +67,17 @@ func _on_button_pressed():
 	
 	
 
-func _on_text_decrease_pressed():
-	#modify_text_size(-2.0
-	pass
-
-func _on_normal_text_pressed():
-	#reset_text_size()
-	pass
-
-func _on_text_increase_pressed():
-	#modify_text_size(2.0)
-	pass
+#func _on_text_decrease_pressed():
+#	#modify_text_size(-2.0
+#	pass
+#
+#func _on_normal_text_pressed():
+#	#reset_text_size()
+#	pass
+#
+#func _on_text_increase_pressed():
+#	#modify_text_size(2.0)
+#	pass
 	
 	
 #func collect_labels_from_directory(path):

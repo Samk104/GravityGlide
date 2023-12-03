@@ -90,59 +90,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 max_value = 1.0
 step = 0.001
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
-visible = false
-anchors_preset = -1
-anchor_left = 0.299
-anchor_top = 0.372
-anchor_right = 0.673
-anchor_bottom = 0.472
-offset_left = -0.0800476
-offset_top = 0.23999
-offset_right = -0.160072
-offset_bottom = -12.76
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="TextSize" type="Label" parent="CanvasLayer/HBoxContainer2" groups=["UI_Element"]]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Text Size "
-
-[node name="VSeparator3" type="VSeparator" parent="CanvasLayer/HBoxContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 30
-theme_override_styles/separator = SubResource("StyleBoxEmpty_wtgyw")
-
-[node name="TextDecrease" type="Button" parent="CanvasLayer/HBoxContainer2" groups=["UI_Element"]]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "-A"
-
-[node name="VSeparator2" type="VSeparator" parent="CanvasLayer/HBoxContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 30
-
-[node name="NormalText" type="Button" parent="CanvasLayer/HBoxContainer2" groups=["UI_Element"]]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "A"
-
-[node name="VSeparator" type="VSeparator" parent="CanvasLayer/HBoxContainer2"]
-layout_mode = 2
-theme_override_constants/separation = 30
-
-[node name="TextIncrease" type="Button" parent="CanvasLayer/HBoxContainer2" groups=["UI_Element"]]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "+A"
+value = 0.5
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="toggled" from="CanvasLayer/HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="value_changed" from="CanvasLayer/HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer2/TextDecrease" to="." method="_on_text_decrease_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer2/NormalText" to="." method="_on_normal_text_pressed"]
-[connection signal="pressed" from="CanvasLayer/HBoxContainer2/TextIncrease" to="." method="_on_text_increase_pressed"]
