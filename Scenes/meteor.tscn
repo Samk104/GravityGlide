@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://dle7yntfrsgut"]
+
+[ext_resource type="Texture2D" uid="uid://cojq2o7npwih0" path="res://Assets/meteor.png" id="1_be2se"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c0kjw"]
+radius = 25.8752
+height = 68.1133
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lwchf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_be2se")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uf8i"]
+radius = 72.0
+height = 752.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgebd"]
+radius = 32.0
+height = 114.764
+
+[node name="meteor" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+rotation = 0.39968
+shape = SubResource("CapsuleShape2D_c0kjw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(16, -8)
+rotation = -0.560251
+scale = Vector2(0.17165, 0.193157)
+sprite_frames = SubResource("SpriteFrames_lwchf")
+animation = &"idle"
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(8, 360)
+shape = SubResource("CapsuleShape2D_7uf8i")
+
+[node name="PlayerDeath" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
+position = Vector2(16, -8)
+rotation = 0.408407
+shape = SubResource("CapsuleShape2D_qgebd")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
