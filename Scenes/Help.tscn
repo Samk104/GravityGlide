@@ -1,26 +1,200 @@
-[gd_scene format=3 uid="uid://cmmu100hrlhqs"]
+[gd_scene load_steps=9 format=3 uid="uid://cmmu100hrlhqs"]
+
+[ext_resource type="Texture2D" uid="uid://dkjxqb6acrke4" path="res://Assets/Backgrounds/vecteezy_night-mars-surface-alien-planet-landscape_13455106.jpg" id="1_0wu52"]
+[ext_resource type="Script" path="res://Scripts/Help.gd" id="1_uk7xf"]
+[ext_resource type="Theme" uid="uid://kcnk43rkyg48" path="res://Assets/GameTheme.tres" id="3_d3l8w"]
+[ext_resource type="Texture2D" uid="uid://bwsujtdhoinba" path="res://Assets/Vector.svg" id="4_2dfwk"]
+[ext_resource type="Texture2D" uid="uid://cubwq3eerc1jq" path="res://Assets/touch-screen-function 1.svg" id="5_jhl35"]
+[ext_resource type="Texture2D" uid="uid://4t5q4tl3amld" path="res://Assets/Group 1.png" id="6_87wnx"]
+[ext_resource type="Texture2D" uid="uid://cg6mcdfd6y22f" path="res://Assets/Group 2.png" id="7_cgp70"]
+[ext_resource type="Texture2D" uid="uid://x1fmw75xuw7m" path="res://Assets/Vector-1.svg" id="8_pryxp"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 14.0
+offset_right = 4.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uk7xf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 2700.0
+offset_right = 2262.0
 offset_bottom = 1481.0
-color = Color(0, 0.392157, 0.643137, 1)
+color = Color(0.2, 0.141176, 0.458824, 1)
+
+[node name="VecteezyNight-mars-surface-alien-planet-landscape13455106" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1124, 625)
+scale = Vector2(2, 2)
+texture = ExtResource("1_0wu52")
+region_enabled = true
+region_rect = Rect2(4.92902, 1.51459, 1120.26, 633.678)
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 21.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -63.0
+offset_top = 57.0
+offset_right = 84.0
+offset_bottom = 81.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0.0588235, 0.654902, 1)
+theme_override_font_sizes/font_size = 60
 text = "Game Controls"
+horizontal_alignment = 1
 
-[node name="Panel" type="Panel" parent="."]
+[node name="level_select_backbtn" type="Button" parent="." groups=["UI_Element"]]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 72.0
+offset_top = 56.0
+offset_right = 124.0
+offset_bottom = 85.0
+theme = ExtResource("3_d3l8w")
+text = "Back"
+
+[node name="hbox" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -886.0
+offset_top = -333.0
+offset_right = 1031.0
+offset_bottom = 379.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_d3l8w")
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Panel5" type="Panel" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="hbox/Panel5"]
+position = Vector2(175, 227)
+scale = Vector2(1.8587, 2.04008)
+texture = ExtResource("4_2dfwk")
+
+[node name="Label" type="Label" parent="hbox/Panel5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 353.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Move the character by rotating  your device "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel4" type="Panel" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="hbox/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 341.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Tap your device’s screen to jump"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="hbox/Panel4"]
+position = Vector2(177, 233)
+scale = Vector2(3.47778, 3.35556)
+texture = ExtResource("5_jhl35")
+
+[node name="Panel3" type="Panel" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="hbox/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 347.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Avoid Cat Aliens, Pitfalls and Asteroids  "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="hbox/Panel3"]
+position = Vector2(177, 220)
+scale = Vector2(3.68506, 3.44753)
+texture = ExtResource("6_87wnx")
+
+[node name="Panel" type="Panel" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="hbox/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 363.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Kill Cat Alien's by jumping on them."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="hbox/Panel"]
+position = Vector2(192, 232)
+scale = Vector2(3.65625, 3.39744)
+texture = ExtResource("7_cgp70")
+
+[node name="Panel2" type="Panel" parent="hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="hbox/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 359.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Finish each  in record time"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="hbox/Panel2"]
+position = Vector2(176, 220.25)
+scale = Vector2(2.30769, 2.01953)
+texture = ExtResource("8_pryxp")
+
+[connection signal="pressed" from="level_select_backbtn" to="." method="_on_level_select_backbtn_pressed"]
