@@ -10,38 +10,58 @@ func _ready():
 func _process(delta):
 	pass
 
+
+
+func _on_level_complete_body_entered(body):
+	if body.name == "Player":
+		death()
+
 func death():
 	queue_free()
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	#TODO: MCLAIN - CHANGE TO GAME OVER SCREEN
 
 
-
-
 func _on_end_game_6_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_5_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_4_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_3_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_2_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
+
+func _on_end_game_7_body_entered(body):
+	if body.name == "Player":
+		death()
 
 
-func _on_end_game_body_entered(body):
-	death()
+func _on_end_game_8_body_entered(body):
+	if body.name == "Player":
+		death()
 
 
-func _on_level_complete_body_entered(body):
-	death()
-	#TODO: Mclain
+func _on_end_game_9_body_entered(body):
+	if body.name == "Player":
+		death()
+
+
+func _on_end_game_10_body_entered(body):
+	if body.name == "Player":
+		death()
+

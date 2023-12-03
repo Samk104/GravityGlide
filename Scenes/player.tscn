@@ -31,7 +31,8 @@ shape = SubResource("CircleShape2D_fxmbr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-3, 3)
-zoom = Vector2(1.1, 1.1)
+offset = Vector2(2.08165e-12, 200)
+zoom = Vector2(1.2, 1.2)
 limit_left = 0
 limit_top = 0
 

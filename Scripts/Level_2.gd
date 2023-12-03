@@ -19,29 +19,36 @@ func death():
 
 
 func _on_end_game_6_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_5_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_4_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_3_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_2_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_end_game_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 
 
 func _on_level_complete_body_entered(body):
-	death()
+	if body.name == "Player":
+		death()
 	#TODO: Mclain

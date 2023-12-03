@@ -37,12 +37,28 @@ func _on_end_game_4_body_entered(body):
 		death()
 
 
+func _on_end_game_3_body_entered(body):
+	if body.name == "Player":
+		death()
+
 
 func _on_end_game_2_body_entered(body):
 	if body.name == "Player":
 		death()
 
+func _on_end_game_7_body_entered(body):
+	if body.name == "Player":
+		death()
 
 
+
+func _on_end_game_9_body_entered(body):
+	if body.name == "Player":
+		death()
+
+
+func _on_end_game_10_body_entered(body):
+	if body.name == "Player":
+		death()
 
 

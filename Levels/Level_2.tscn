@@ -73964,7 +73964,7 @@ sources/3 = SubResource("TileSetAtlasSource_3gm7s")
 sources/4 = SubResource("TileSetAtlasSource_3hq4a")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2du61"]
-size = Vector2(177, 97.125)
+size = Vector2(58.25, 97.125)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_h46xo")
@@ -73994,14 +73994,14 @@ position = Vector2(112, 405)
 position = Vector2(5950, 718)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelComplete"]
-position = Vector2(-39, 16)
+position = Vector2(-8.875, 15)
 shape = SubResource("RectangleShape2D_2du61")
 
 [node name="EndGame" type="Area2D" parent="."]
 position = Vector2(5950, 718)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndGame"]
-position = Vector2(-687, 307)
+position = Vector2(-693, 300)
 shape = SubResource("RectangleShape2D_2du61")
 
 [node name="EndGame2" type="Area2D" parent="."]
@@ -74036,7 +74036,7 @@ shape = SubResource("RectangleShape2D_2du61")
 position = Vector2(5950, 718)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndGame6"]
-position = Vector2(-5010, 309.125)
+position = Vector2(-5024, 308)
 shape = SubResource("RectangleShape2D_2du61")
 
 [connection signal="body_entered" from="LevelComplete" to="." method="_on_level_complete_body_entered"]

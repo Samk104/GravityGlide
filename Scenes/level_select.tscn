@@ -141,37 +141,55 @@ text = "Level 4"
 
 [node name="Level5" type="Button" parent="."]
 layout_mode = 0
-offset_left = 955.0
-offset_top = 541.0
-offset_right = 1159.0
-offset_bottom = 613.0
+offset_left = 591.0
+offset_top = 881.0
+offset_right = 795.0
+offset_bottom = 953.0
 text = "Level 5"
 
 [node name="Level6" type="Button" parent="."]
 layout_mode = 0
-offset_left = 959.0
-offset_top = 625.0
-offset_right = 1163.0
-offset_bottom = 697.0
+offset_left = 952.0
+offset_top = 545.0
+offset_right = 1156.0
+offset_bottom = 617.0
 text = "Level 6
 "
 
 [node name="Level7" type="Button" parent="."]
 layout_mode = 0
-offset_left = 957.0
-offset_top = 707.0
-offset_right = 1161.0
-offset_bottom = 779.0
+offset_left = 956.0
+offset_top = 631.0
+offset_right = 1160.0
+offset_bottom = 703.0
 text = "Level 7
 "
 
 [node name="Level8" type="Button" parent="."]
 layout_mode = 0
-offset_left = 961.0
-offset_top = 793.0
-offset_right = 1165.0
-offset_bottom = 865.0
+offset_left = 956.0
+offset_top = 716.0
+offset_right = 1160.0
+offset_bottom = 788.0
 text = "Level 8
+"
+
+[node name="Level9" type="Button" parent="."]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 796.0
+offset_right = 1160.0
+offset_bottom = 868.0
+text = "Level 9
+"
+
+[node name="Level10" type="Button" parent="."]
+layout_mode = 0
+offset_left = 957.0
+offset_top = 874.0
+offset_right = 1161.0
+offset_bottom = 946.0
+text = "Level 10
 "
 
 [connection signal="pressed" from="level_select_backbtn" to="." method="_on_level_select_backbtn_pressed"]
@@ -182,5 +200,7 @@ text = "Level 8
 [connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]
 [connection signal="pressed" from="Level6" to="." method="_on_level_6_pressed"]
-[connection signal="pressed" from="Level7" to="." method="_on_level_6_pressed"]
+[connection signal="pressed" from="Level7" to="." method="_on_level_7_pressed"]
 [connection signal="pressed" from="Level8" to="." method="_on_level_8_pressed"]
+[connection signal="pressed" from="Level9" to="." method="_on_level_9_pressed"]
+[connection signal="pressed" from="Level10" to="." method="_on_level_10_pressed"]

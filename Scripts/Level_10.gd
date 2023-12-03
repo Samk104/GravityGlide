@@ -11,7 +11,6 @@ func _process(delta):
 	pass
 
 
-
 func _on_level_complete_body_entered(body):
 	if body.name == "Player":
 		death()
@@ -37,6 +36,10 @@ func _on_end_game_4_body_entered(body):
 		death()
 
 
+func _on_end_game_3_body_entered(body):
+	if body.name == "Player":
+		death()
+
 
 func _on_end_game_2_body_entered(body):
 	if body.name == "Player":
@@ -45,4 +48,21 @@ func _on_end_game_2_body_entered(body):
 
 
 
+func _on_end_game_7_body_entered(body):
+	if body.name == "Player":
+		death()
 
+
+func _on_end_game_8_body_entered(body):
+	if body.name == "Player":
+		death()
+
+
+func _on_end_game_9_body_entered(body):
+	if body.name == "Player":
+		death()
+
+
+func _on_end_game_10_body_entered(body):
+	if body.name == "Player":
+		death()
