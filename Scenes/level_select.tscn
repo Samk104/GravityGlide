@@ -15,9 +15,11 @@ dir_path = "res://levels"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 1.655
+anchor_bottom = 1.656
+offset_right = 0.439896
+offset_bottom = -0.088089
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -25,26 +27,27 @@ size_flags_vertical = 4
 color = Color(0.4, 0.588235, 0.607843, 1)
 
 [node name="Runway2023-11-22t015030_531zImageVariation-fotor-20231126193255" type="Sprite2D" parent="ColorRect"]
-position = Vector2(576, 184)
-scale = Vector2(0.65, 0.65)
+position = Vector2(955.2, 543.4)
+scale = Vector2(0.927539, 0.690885)
 texture = ExtResource("1_cnmd2")
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect"]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 116.0
-offset_right = 1040.0
-offset_bottom = 644.0
+offset_left = 284.0
+offset_top = 264.0
+offset_right = 1693.0
+offset_bottom = 1049.0
 color = Color(1, 1, 1, 0.498039)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 1.649
+anchor_bottom = 1.641
 offset_left = 120.0
 offset_top = 128.0
-offset_right = -128.0
+offset_right = -875.648
+offset_bottom = -415.368
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -80,13 +83,14 @@ text = "Settings"
 [node name="Label" type="Label" parent="." groups=["UI_Element"]]
 layout_direction = 1
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -48.0
-offset_top = 24.0
-offset_right = 43.0
-offset_bottom = 50.0
+anchor_right = 1.111
+anchor_bottom = 0.173
+offset_left = 66.0
+offset_top = 14.0
+offset_right = -33.8721
+offset_bottom = -12.104
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.0823529, 0.376471, 1)
@@ -95,5 +99,24 @@ text = "Select A Level"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Level1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 299.0
+offset_right = 1047.0
+offset_bottom = 358.0
+text = "Level 1
+"
+
+[node name="Level2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 846.0
+offset_top = 388.0
+offset_right = 1054.0
+offset_bottom = 462.0
+text = "Level 2"
+
 [connection signal="pressed" from="level_select_backbtn" to="." method="_on_level_select_backbtn_pressed"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
