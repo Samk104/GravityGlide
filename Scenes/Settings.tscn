@@ -21,8 +21,8 @@ metadata/_edit_use_anchors_ = true
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_left = 3.0
 offset_top = 2.0
-offset_right = 1925.0
-offset_bottom = 1074.0
+offset_right = 2635.0
+offset_bottom = 1356.0
 color = Color(0.12549, 0.137255, 0.294118, 1)
 
 [node name="Label" type="Label" parent="CanvasLayer/ColorRect" groups=["UI_Element"]]
@@ -30,10 +30,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -328.0
-offset_top = 23.0
-offset_right = 434.0
-offset_bottom = 166.0
+offset_left = -658.0
+offset_top = 24.0
+offset_right = 104.0
+offset_bottom = 167.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 60
 text = "Settings"
@@ -42,10 +42,10 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/ColorRect" groups=["UI_Element"]]
 layout_mode = 0
-offset_left = 206.0
+offset_left = 162.0
 offset_top = 51.0
-offset_right = 308.0
-offset_bottom = 98.0
+offset_right = 274.0
+offset_bottom = 103.0
 text = "Exit"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
