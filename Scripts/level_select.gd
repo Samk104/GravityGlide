@@ -4,6 +4,7 @@ const LEVEL_BTN=preload("res://Scenes/level_btn.tscn")
 @onready var grid= $MarginContainer/VBoxContainer/GridContainer
 
 var clicked_button = ""
+var pathToLoad = ""
 #
 #func _ready():
 #	#Gets directory
@@ -38,55 +39,67 @@ var clicked_button = ""
 func _on_settings_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Settings.tscn")
 
-
 func _on_level_select_backbtn_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
+func loadLevel():
+	var LS = preload("res://Scenes/loading_scene.tscn").instantiate()
+	add_child(LS)
+	var timer := Timer.new()
+	add_child(timer)
+	timer.timeout.connect(actuallyLoadLevel)
+	timer.start(0.2)
 
-
+func actuallyLoadLevel():
+	get_tree().change_scene_to_file(pathToLoad)
 
 
 func _on_level_1_pressed():
+	loadLevel()
 	clicked_button = "world.tscn"
-	get_tree().change_scene_to_file("res://Levels/world.tscn")
-
+	pathToLoad = "res://Levels/world.tscn"
 
 func _on_level_2_pressed():
+	loadLevel()
 	clicked_button = "Level_2.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_2.tscn")
-
+	pathToLoad = "res://Levels/Level_2.tscn"
 
 func _on_level_3_pressed():
+	loadLevel()
 	clicked_button = "Level_3.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_3.tscn")
+	pathToLoad = "res://Levels/Level_3.tscn"
 
 func _on_level_4_pressed():
+	loadLevel()
 	clicked_button = "Level_4.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_4.tscn")
-
+	pathToLoad = "res://Levels/Level_4.tscn"
 
 func _on_level_5_pressed():
+	loadLevel()
 	clicked_button = "Level_5.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_5.tscn")
-	
+	pathToLoad = "res://Levels/Level_5.tscn"
 
 func _on_level_6_pressed():
+	loadLevel()
 	clicked_button = "Level_6.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_6.tscn")
+	pathToLoad = "res://Levels/Level_6.tscn"
 	
 func _on_level_7_pressed():
+	loadLevel()
 	clicked_button = "Level_7.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_7.tscn")
+	pathToLoad = "res://Levels/Level_7.tscn"
 
 func _on_level_8_pressed():
+	loadLevel()
 	clicked_button = "Level_8.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_8.tscn")
+	pathToLoad = "res://Levels/Level_8.tscn"
 
 func _on_level_9_pressed():
+	loadLevel()
 	clicked_button = "Level_9.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_9.tscn")
-
+	pathToLoad = "res://Levels/Level_9.tscn"
 
 func _on_level_10_pressed():
+	loadLevel()
 	clicked_button = "Level_10.tscn"
-	get_tree().change_scene_to_file("res://Levels/Level_10.tscn")
+	pathToLoad = "res://Levels/Level_10.tscn"
