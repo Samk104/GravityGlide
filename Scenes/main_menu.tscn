@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_rrc4s"]
 [ext_resource type="PackedScene" uid="uid://b5hpgl4qvbqel" path="res://Scenes/BG.tscn" id="1_wdumw"]
-[ext_resource type="AudioStream" uid="uid://b5lubrp6em67k" path="res://Assets/8bit-music-for-game-68698.mp3" id="3_yl8kc"]
+[ext_resource type="Theme" uid="uid://kcnk43rkyg48" path="res://Assets/GameTheme.tres" id="2_4wxo0"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -40,15 +40,18 @@ offset_left = 384.0
 offset_top = -288.0
 offset_right = 514.0
 offset_bottom = -243.0
+theme = ExtResource("2_4wxo0")
 theme_override_font_sizes/font_size = 24
 text = "Settings"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-offset_left = -256.0
-offset_bottom = 160.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -359.0
+offset_bottom = 166.0
+grow_horizontal = 0
 theme_override_constants/margin_right = 10
 
 [node name="BoxContainer" type="VBoxContainer" parent="MarginContainer"]
@@ -58,17 +61,19 @@ theme_override_constants/separation = 20
 [node name="contGame" type="Button" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4wxo0")
 text = "Continue Game"
 
 [node name="leader" type="Button" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4wxo0")
 text = "Leaderboard"
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
 layout_mode = 1
-offset_right = 256.0
-offset_bottom = 160.0
+offset_right = 330.0
+offset_bottom = 166.0
 theme_override_constants/margin_left = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
@@ -78,21 +83,15 @@ theme_override_constants/separation = 20
 [node name="newGame" type="Button" parent="MarginContainer3/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4wxo0")
 text = "New Game"
 
 [node name="viewControl" type="Button" parent="MarginContainer3/VBoxContainer"]
 layout_direction = 1
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4wxo0")
 text = "View Controls"
-
-[node name="Currency" type="Label" parent="."]
-layout_mode = 0
-offset_left = -512.0
-offset_top = -232.0
-offset_right = -376.0
-offset_bottom = -180.0
-text = "Currency:"
 
 [node name="RewardStore" type="Button" parent="."]
 layout_mode = 0
@@ -100,6 +99,7 @@ offset_left = -512.0
 offset_top = -288.0
 offset_right = -384.0
 offset_bottom = -240.0
+theme = ExtResource("2_4wxo0")
 theme_override_font_sizes/font_size = 25
 text = "Store"
 
@@ -111,13 +111,17 @@ offset_left = -113.0
 offset_top = 190.0
 offset_right = 104.0
 offset_bottom = 257.0
+theme = ExtResource("2_4wxo0")
 text = "Quit
 "
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_yl8kc")
-volume_db = -25.0
-autoplay = true
+[node name="Currency" type="Label" parent="."]
+offset_left = -368.0
+offset_top = -277.0
+offset_right = -48.0
+offset_bottom = -243.0
+theme_override_font_sizes/font_size = 24
+text = "Stars:"
 
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxContainer/contGame" to="." method="_on_cont_game_pressed"]
