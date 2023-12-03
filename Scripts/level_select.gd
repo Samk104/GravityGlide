@@ -4,10 +4,11 @@ const LEVEL_BTN=preload("res://Scenes/level_btn.tscn")
 @onready var grid= $MarginContainer/VBoxContainer/GridContainer
 
 var clicked_button = ""
-
+#
 #func _ready():
-	#Gets directory
-	#getLevels(dir_path)
+#	#Gets directory
+#	getLevels(dir_path)
+#
 #func getLevels(path) -> void:
 #	var dir := DirAccess.open(path)
 #	#List all the file names and creates a buttun for each
@@ -21,15 +22,15 @@ var clicked_button = ""
 #		dir.list_dir_end()
 #	else:
 #		print('Error occured when accessing the path')
-#
-#
-#		#creates a buttun places it in the grid veiw and edit the display name
+##
+##
+##		#creates a buttun places it in the grid veiw and edit the display name
 #func create_level_btn(level_path:String,level_name:String)-> void:
 #	var btn = LEVEL_BTN.instantiate()
-#	btn.text = level_name.trim_suffix(".tscn")
+#	btn.text = level_name.trim_suffix(".tscn").replace("_"," ")
 #	btn.level_path = level_path
 #	grid.add_child(btn)
-#	pass
+#
 
 
 

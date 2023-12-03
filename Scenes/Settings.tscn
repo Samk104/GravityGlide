@@ -14,6 +14,8 @@ offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3gtbu")
+dir_path = "res://Scenes"
+bus_name = "0"
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -90,6 +92,7 @@ max_value = 1.0
 step = 0.001
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.299
 anchor_top = 0.372
