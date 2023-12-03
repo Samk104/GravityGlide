@@ -49,3 +49,4 @@ func _on_end_game_2_body_entered(body):
 func _on_end_game_body_entered(body):
 	death()
 
+
