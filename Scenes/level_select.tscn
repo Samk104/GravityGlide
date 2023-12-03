@@ -27,8 +27,8 @@ size_flags_vertical = 4
 color = Color(0.4, 0.588235, 0.607843, 1)
 
 [node name="Runway2023-11-22t015030_531zImageVariation-fotor-20231126193255" type="Sprite2D" parent="ColorRect"]
-position = Vector2(962.7, 537)
-scale = Vector2(0.934863, 0.699219)
+position = Vector2(954.7, 548)
+scale = Vector2(0.927051, 0.713542)
 texture = ExtResource("1_cnmd2")
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect"]
@@ -68,15 +68,14 @@ offset_bottom = 87.0
 text = "Back"
 
 [node name="settings" type="Button" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.993
 anchor_bottom = 1.0
-offset_left = 960.0
+offset_left = 1672.0
 offset_top = 40.0
-offset_right = -53.936
-offset_bottom = -566.0
+offset_right = -53.5599
+offset_bottom = -979.0
 theme_override_font_sizes/font_size = 24
 text = "Settings"
 
@@ -102,22 +101,59 @@ vertical_alignment = 1
 
 [node name="Level1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 848.0
-offset_top = 299.0
-offset_right = 1047.0
-offset_bottom = 358.0
+offset_left = 594.0
+offset_top = 544.0
+offset_right = 795.0
+offset_bottom = 609.0
 text = "Level 1
 "
 
 [node name="Level2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 846.0
-offset_top = 388.0
-offset_right = 1054.0
-offset_bottom = 462.0
+offset_left = 593.0
+offset_top = 626.0
+offset_right = 795.0
+offset_bottom = 693.0
 text = "Level 2"
+
+[node name="Level3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 590.0
+offset_top = 706.0
+offset_right = 793.0
+offset_bottom = 775.0
+text = "Level 3"
+
+[node name="Level4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 790.0
+offset_right = 793.0
+offset_bottom = 862.0
+text = "Level 4"
+
+[node name="Level5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 541.0
+offset_right = 1159.0
+offset_bottom = 613.0
+text = "Level 5"
+
+[node name="Level6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 959.0
+offset_top = 625.0
+offset_right = 1163.0
+offset_bottom = 697.0
+text = "Level 6
+"
 
 [connection signal="pressed" from="level_select_backbtn" to="." method="_on_level_select_backbtn_pressed"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level6" to="." method="_on_level_6_pressed"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dle7yntfrsgut"]
+[gd_scene load_steps=7 format=3 uid="uid://b7ni3xn7p8uyn"]
 
+[ext_resource type="Script" path="res://Scripts/meteor.gd" id="1_7275u"]
 [ext_resource type="Texture2D" uid="uid://cojq2o7npwih0" path="res://Assets/meteor.png" id="1_be2se"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c0kjw"]
@@ -18,16 +19,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uf8i"]
-radius = 72.0
-height = 752.0
+radius = 191.0
+height = 710.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgebd"]
 radius = 32.0
 height = 114.764
 
 [node name="meteor" type="CharacterBody2D"]
+script = ExtResource("1_7275u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(8, 8)
 rotation = 0.39968
 shape = SubResource("CapsuleShape2D_c0kjw")
@@ -42,10 +45,11 @@ animation = &"idle"
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(8, 360)
+position = Vector2(10, 322)
 shape = SubResource("CapsuleShape2D_7uf8i")
 
 [node name="PlayerDeath" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
 position = Vector2(16, -8)
@@ -53,4 +57,4 @@ rotation = 0.408407
 shape = SubResource("CapsuleShape2D_qgebd")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
-[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerDeath" to="." method="_on_player_death_body_entered"]
