@@ -58,9 +58,22 @@ func getStarCount(time : float, levelIndex : int):
 	return 0
 
 
-func continueButton():
-	get_tree().change_scene_to_file(nextLevel)
+var levelToLoad := ""
+func loadLevel(level : String):
+	levelToLoad = level
+	var LS = preload("res://Scenes/loading_scene.tscn").instantiate()
+	add_child(LS)
+	var timer := Timer.new()
+	add_child(timer)
+	timer.timeout.connect(actuallyLoadLevel)
+	timer.start(0.2)
+func actuallyLoadLevel():
+	get_tree().change_scene_to_file(levelToLoad)
 
+
+func continueButton():
+	loadLevel(nextLevel)
+	#get_tree().change_scene_to_file(nextLevel)
 
 func quitButton():
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

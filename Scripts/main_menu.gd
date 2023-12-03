@@ -9,13 +9,29 @@ func _ready():
 #	print(global_state.get_current_page())
 	pass
 
+var levelToLoad := ""
+func loadLevel(level : String):
+	levelToLoad = level
+	var LS = preload("res://Scenes/loading_scene.tscn").instantiate()
+	add_child(LS)
+	var timer := Timer.new()
+	add_child(timer)
+	timer.timeout.connect(actuallyLoadLevel)
+	timer.start(0.2)
+func actuallyLoadLevel():
+	get_tree().change_scene_to_file(levelToLoad)
+
+
+
+
 func _on_cont_game_pressed():
 	get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
 
 
 
 func _on_new_game_pressed():
-	get_tree().change_scene_to_file("res://Levels/world.tscn")
+	loadLevel("res://Levels/world.tscn")
+	#get_tree().change_scene_to_file("res://Levels/world.tscn")
 
 
 func _on_view_control_pressed():
