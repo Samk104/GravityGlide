@@ -8,7 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _physics_process(delta):
 	velocity.y = 0
 	if fall == true:
-		velocity.y += gravity * delta * 7
+		velocity.y += gravity * delta * 15
 	
 	move_and_slide()
 
