@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://mdtkk0xwncx3"]
+
+[sub_resource type="Theme" id="Theme_8tufe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vr0v2"]
+font_size = 60
+
+[node name="Loading" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 2804.0
+offset_bottom = 1390.0
+color = Color(0.101961, 0.643137, 0.721569, 1)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 502.0
+offset_top = 784.0
+offset_right = 1394.0
+offset_bottom = 875.0
+theme = SubResource("Theme_8tufe")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 802.0
+offset_top = 650.0
+offset_right = 1083.0
+offset_bottom = 736.0
+text = "Loading..."
+label_settings = SubResource("LabelSettings_vr0v2")
