@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b486pb65gap6v"]
 
-[ext_resource type="Script" path="res://Scripts/Level_9.gd" id="1_50lhf"]
+[ext_resource type="Script" path="res://Scripts/Level.gd" id="1_pfg8b"]
 [ext_resource type="Texture2D" uid="uid://xn8e03s5lgyv" path="res://Assets/tileset-3.png" id="2_e3s3f"]
 [ext_resource type="Texture2D" uid="uid://xs0i5xv8kbnd" path="res://Assets/tile2.jpg" id="3_vdjh7"]
 [ext_resource type="Texture2D" uid="uid://cnhmvkl1yngpv" path="res://Assets/tile1.jpg" id="4_gmbwu"]
@@ -73968,7 +73968,9 @@ sources/4 = SubResource("TileSetAtlasSource_3hq4a")
 size = Vector2(177, 97.125)
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_50lhf")
+script = ExtResource("1_pfg8b")
+levelIndex = 8
+nextLevelPath = "res://Levels/Level_10.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7slcf")
@@ -74076,13 +74078,13 @@ position = Vector2(5189, 138)
 [node name="meteor5" parent="." instance=ExtResource("8_i6loi")]
 position = Vector2(4496, 84)
 
-[connection signal="body_entered" from="LevelComplete" to="." method="_on_level_complete_body_entered"]
-[connection signal="body_entered" from="EndGame2" to="." method="_on_end_game_2_body_entered"]
-[connection signal="body_entered" from="EndGame3" to="." method="_on_end_game_3_body_entered"]
-[connection signal="body_entered" from="EndGame4" to="." method="_on_end_game_4_body_entered"]
-[connection signal="body_entered" from="EndGame5" to="." method="_on_end_game_5_body_entered"]
-[connection signal="body_entered" from="EndGame6" to="." method="_on_end_game_6_body_entered"]
-[connection signal="body_entered" from="EndGame7" to="." method="_on_end_game_7_body_entered"]
-[connection signal="body_entered" from="EndGame8" to="." method="_on_end_game_8_body_entered"]
-[connection signal="body_entered" from="EndGame9" to="." method="_on_end_game_9_body_entered"]
-[connection signal="body_entered" from="EndGame10" to="." method="_on_end_game_10_body_entered"]
+[connection signal="body_entered" from="LevelComplete" to="." method="onLevelClear"]
+[connection signal="body_entered" from="EndGame2" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame3" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame4" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame5" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame6" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame7" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame8" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame9" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame10" to="." method="onPitfall"]

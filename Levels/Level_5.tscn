@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dhmc22pfdw3pa"]
 
-[ext_resource type="Script" path="res://Scripts/Level_5.gd" id="1_wcbvj"]
+[ext_resource type="Script" path="res://Scripts/Level.gd" id="1_qxr81"]
 [ext_resource type="Texture2D" uid="uid://xn8e03s5lgyv" path="res://Assets/tileset-3.png" id="2_i0epc"]
 [ext_resource type="Texture2D" uid="uid://xs0i5xv8kbnd" path="res://Assets/tile2.jpg" id="3_f44gy"]
 [ext_resource type="Texture2D" uid="uid://cnhmvkl1yngpv" path="res://Assets/tile1.jpg" id="4_obxet"]
@@ -73968,7 +73968,9 @@ sources/4 = SubResource("TileSetAtlasSource_3hq4a")
 size = Vector2(177, 97.125)
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_wcbvj")
+script = ExtResource("1_qxr81")
+levelIndex = 4
+nextLevelPath = "res://Levels/Level_6.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7slcf")
@@ -74029,8 +74031,8 @@ position = Vector2(5085, -40)
 [node name="meteor2" parent="." instance=ExtResource("8_swj7p")]
 position = Vector2(3117, -11)
 
-[connection signal="body_entered" from="LevelComplete" to="." method="_on_level_complete_body_entered"]
-[connection signal="body_entered" from="EndGame2" to="." method="_on_end_game_2_body_entered"]
-[connection signal="body_entered" from="EndGame4" to="." method="_on_end_game_4_body_entered"]
-[connection signal="body_entered" from="EndGame5" to="." method="_on_end_game_5_body_entered"]
-[connection signal="body_entered" from="EndGame6" to="." method="_on_end_game_6_body_entered"]
+[connection signal="body_entered" from="LevelComplete" to="." method="onLevelClear"]
+[connection signal="body_entered" from="EndGame2" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame4" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame5" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame6" to="." method="onPitfall"]

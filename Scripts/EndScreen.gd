@@ -5,11 +5,14 @@ extends Control
 ## Should be instantiated over each level after completion.
 ## 'setUp()' should be called right after instantiation.
 
+var nextLevel : String = "res://Scenes/main_menu.tscn"
 
-func setUp(time : float, levelIndex : int):
+func setUp(time : float, levelIndex : int, newNextLevel : String):
 	## Sets up the content of the end screen.
 	## time (float): The elapsed time in seconds.
 	## levelIndex (int): The predetermined zero-based index of the level.
+	
+	nextLevel = newNextLevel
 	
 	var ParTimes = Global.new().ParTimes
 	#Set stars, starPar
@@ -22,7 +25,7 @@ func setUp(time : float, levelIndex : int):
 	$Panel/VBoxContainer/Time.text = "Time Taken: %s" % formatTime(time)
 	
 	#Inform Master Leaderboard, create short leaderboard
-	var leaderboardScene = preload("res://Scenes/Leaderboard.tscn").instantiate()
+	var leaderboardScene = Leaderboard.new()#preload("res://Scenes/Leaderboard.tscn").instantiate()
 	var leaderboardTimes = leaderboardScene.appendNewTime(time, levelIndex)
 	
 	var board = $Panel/VBoxContainer/ScrollContainer/Leaderboard/ExampleBoard
@@ -56,8 +59,7 @@ func getStarCount(time : float, levelIndex : int):
 
 
 func continueButton():
-	#TODO: Change logic to point to next level/main menu
-	get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
+	get_tree().change_scene_to_file(nextLevel)
 
 
 func quitButton():

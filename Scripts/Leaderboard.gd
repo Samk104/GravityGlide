@@ -47,7 +47,7 @@ func appendNewTime(time : float, levelIndex : int) -> Array:
 
 func getStarCount() -> int:
 	var starCount = 0
-	var data = loadAsJSON(global.LeaderboardPath, [[], [], [], [], [], [], [], []])
+	var data = loadAsJSON(global.LeaderboardPath, [[], [], [], [], [], [], [], [], [], [], ])
 	var parTimes = global.ParTimes
 	for i in range(len(data)):#For each level, get top score
 		var pars = parTimes[i]

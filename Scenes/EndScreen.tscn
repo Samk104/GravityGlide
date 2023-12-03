@@ -148,13 +148,15 @@ grow_vertical = 0
 alignment = 1
 
 [node name="ContinueButton" type="Button" parent="Panel/Buttons"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "Continue"
 
 [node name="QuitButton" type="Button" parent="Panel/Buttons"]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "Quit"
 
 [connection signal="pressed" from="Panel/Buttons/ContinueButton" to="." method="continueButton"]

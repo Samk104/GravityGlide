@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://chx4k3o8gounp"]
 
 [ext_resource type="Texture2D" uid="uid://xn8e03s5lgyv" path="res://Assets/tileset-3.png" id="1_efg4e"]
-[ext_resource type="Script" path="res://Scripts/world.gd" id="1_fa2i2"]
+[ext_resource type="Script" path="res://Scripts/Level.gd" id="1_i103j"]
 [ext_resource type="Texture2D" uid="uid://xs0i5xv8kbnd" path="res://Assets/tile2.jpg" id="2_0tayc"]
 [ext_resource type="Texture2D" uid="uid://cnhmvkl1yngpv" path="res://Assets/tile1.jpg" id="3_bwrhp"]
 [ext_resource type="PackedScene" uid="uid://b5hpgl4qvbqel" path="res://Scenes/BG.tscn" id="6_wrakw"]
@@ -73966,7 +73966,8 @@ sources/4 = SubResource("TileSetAtlasSource_3hq4a")
 size = Vector2(142, 184.5)
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_fa2i2")
+script = ExtResource("1_i103j")
+nextLevelPath = "res://Levels/Level_2.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7slcf")
@@ -74027,10 +74028,10 @@ position = Vector2(5950, 718)
 position = Vector2(-5000, 264)
 shape = SubResource("RectangleShape2D_2du61")
 
-[connection signal="body_entered" from="LevelComplete" to="." method="_on_level_complete_body_entered"]
-[connection signal="body_entered" from="EndGame" to="." method="_on_end_game_body_entered"]
-[connection signal="body_entered" from="EndGame2" to="." method="_on_end_game_2_body_entered"]
-[connection signal="body_entered" from="EndGame3" to="." method="_on_end_game_3_body_entered"]
-[connection signal="body_entered" from="EndGame4" to="." method="_on_end_game_4_body_entered"]
-[connection signal="body_entered" from="EndGame5" to="." method="_on_end_game_5_body_entered"]
-[connection signal="body_entered" from="EndGame6" to="." method="_on_end_game_6_body_entered"]
+[connection signal="body_entered" from="LevelComplete" to="." method="onLevelClear"]
+[connection signal="body_entered" from="EndGame" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame2" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame3" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame4" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame5" to="." method="onPitfall"]
+[connection signal="body_entered" from="EndGame6" to="." method="onPitfall"]
