@@ -14,7 +14,9 @@ func _physics_process(delta):
 
 
 func _on_player_detection_body_entered(body):
-	fall = true
+	if body.name == "Player":
+		fall = true
+	
 
 func death():
 	fall = false
