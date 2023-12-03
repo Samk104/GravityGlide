@@ -27,8 +27,8 @@ size_flags_vertical = 4
 color = Color(0.4, 0.588235, 0.607843, 1)
 
 [node name="Runway2023-11-22t015030_531zImageVariation-fotor-20231126193255" type="Sprite2D" parent="ColorRect"]
-position = Vector2(955.2, 543.4)
-scale = Vector2(0.927539, 0.690885)
+position = Vector2(962.7, 537)
+scale = Vector2(0.934863, 0.699219)
 texture = ExtResource("1_cnmd2")
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect"]
@@ -84,13 +84,14 @@ text = "Settings"
 layout_direction = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
+anchor_left = 0.158
+anchor_top = 0.021
 anchor_right = 1.111
 anchor_bottom = 0.173
-offset_left = 66.0
-offset_top = 14.0
-offset_right = -33.8721
-offset_bottom = -12.104
+offset_left = 150.64
+offset_top = -6.68
+offset_right = -605.872
+offset_bottom = -10.104
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.0823529, 0.376471, 1)
