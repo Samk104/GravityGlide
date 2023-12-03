@@ -30,8 +30,8 @@ func _on_pressed()-> void:
 "
 
 [node name="level_btn" type="Button"]
-custom_minimum_size = Vector2(100, 100)
-offset_right = 62.0
+custom_minimum_size = Vector2(10, 10)
+offset_right = 67.0
 offset_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
