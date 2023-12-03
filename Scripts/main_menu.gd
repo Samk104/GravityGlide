@@ -19,7 +19,7 @@ func _on_new_game_pressed():
 
 
 func _on_view_control_pressed():
-	get_tree().change_scene_to_file("res://Scenes/level_select.tscn")
+	get_tree().change_scene_to_file("res://Scenes/help.tscn")
 	pass # Replace with function body.
 
 
