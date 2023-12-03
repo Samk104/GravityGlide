@@ -70,3 +70,11 @@ func _on_level_5_pressed():
 
 func _on_level_6_pressed():
 	get_tree().change_scene_to_file("res://Levels/Level_6.tscn")
+
+
+func _on_level_8_pressed():
+	get_tree().change_scene_to_file("res://Levels/Level_8.tscn")
+
+
+func _on_level_7_pressed():
+	pass # Replace with function body.
