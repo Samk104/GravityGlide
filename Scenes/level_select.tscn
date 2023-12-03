@@ -16,10 +16,10 @@ dir_path = "res://levels"
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.655
-anchor_bottom = 1.656
-offset_right = 0.439896
-offset_bottom = -0.088089
+anchor_right = 1.0
+anchor_bottom = 1.013
+offset_right = -17.0
+offset_bottom = -0.0400391
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4

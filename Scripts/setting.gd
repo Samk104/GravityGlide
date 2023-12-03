@@ -4,7 +4,8 @@ extends Node
 var labels: Array = [] 
 @export var initial_sizes: Dictionary = {}
 @export_dir var dir_path
-@export var bus_name: String
+@export 
+var bus_name: String
 @onready var MasterVolSlider= $CanvasLayer/HBoxContainer/HSlider
 
 var bus_index: int 
@@ -23,13 +24,14 @@ func _ready():
 		return
 	ready_called = true
 	#collect_labels_from_directory(pathofdir)
-	
-	bus_index = AudioServer.get_bus_index("Master")
-	MasterVolSlider.value=AudioServer.get_bus_volume_db(bus_index)
-	_enable_audio_feature()
-
 	_sound_text = $CanvasLayer/HBoxContainer/Label2
 	_audio_slider = $CanvasLayer/HBoxContainer/HSlider
+	bus_index = AudioServer.get_bus_index("Master")
+	MasterVolSlider.value=AudioServer.get_bus_volume_db(bus_index)
+	
+	_enable_audio_feature()
+
+
 
 
 	
