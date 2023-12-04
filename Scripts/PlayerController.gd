@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var health = 10
-var GravityStrength = 100
+var GravityStrength = 300
 var JUMP_VELOCITY = 600
 #@onready var anim = get_node("AnimatedSprite2D")
 var grounded = true
@@ -26,7 +26,7 @@ func _physics_process(_delta):
 		grav = Vector3.DOWN
 	var gravAngle : float = clamp(Vector2(grav.x, grav.y).angle(), -120 * PI / 180, 0)
 	#print(Vector2(grav.x, -grav.y))
-	constant_force = Vector2.RIGHT.rotated(gravAngle) * mass * GravityStrength * 1.5
+	constant_force = Vector2.RIGHT.rotated(gravAngle) * mass * GravityStrength
 	
 	# Handle Jump.
 	if (Input.is_action_just_pressed("ui_up") or Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)) and grounded:
