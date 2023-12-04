@@ -17,10 +17,10 @@ func setUp(time : float, levelIndex : int, newNextLevel : String):
 	var ParTimes = Global.new().ParTimes
 	#Set stars, starPar
 	for i in range(3):
-		var starText = $Panel/VBoxContainer/Stars.get_child(i).get_child(1)
-		starText.text = formatTime(ParTimes[levelIndex][i])
+		var starBox = $Panel/VBoxContainer/Stars.get_child(i)
+		starBox.get_child(1).text = formatTime(ParTimes[levelIndex][i])
 		if (time > ParTimes[levelIndex][i]):
-			starText.modulate = Color(0.25, 0.25, 0.25)
+			starBox.get_child(0).modulate = Color(0.25, 0.25, 0.25)
 	
 	#Set time
 	$Panel/VBoxContainer/Time.text = "Time Taken: %s" % formatTime(time)
