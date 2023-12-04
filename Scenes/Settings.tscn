@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsq2kd5o5w13c"]
+[gd_scene load_steps=5 format=3 uid="uid://bsq2kd5o5w13c"]
 
 [ext_resource type="Script" path="res://Scripts/setting.gd" id="1_3gtbu"]
+[ext_resource type="Theme" uid="uid://kcnk43rkyg48" path="res://Assets/GameTheme.tres" id="2_gif0k"]
 [ext_resource type="PackedScene" uid="uid://bxn4ph88l8xwf" path="res://Scenes/visualsSlider.tscn" id="2_nkwl2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wtgyw"]
@@ -19,7 +20,7 @@ dir_path = "res://Scenes"
 bus_name = "0"
 metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="Node" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_left = 3.0
@@ -49,25 +50,27 @@ offset_left = 162.0
 offset_top = 51.0
 offset_right = 274.0
 offset_bottom = 103.0
+theme = ExtResource("2_gif0k")
 text = "Exit"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.287
-anchor_top = 0.241
-anchor_right = 0.69
-anchor_bottom = 0.403
-offset_left = 23.96
-offset_top = -0.279999
-offset_right = 19.2
-offset_bottom = -15.24
+anchor_left = 0.299
+anchor_top = 0.202
+anchor_right = 0.708
+anchor_bottom = 0.357
+offset_left = 0.919922
+offset_top = -20.16
+offset_right = -392.36
+offset_bottom = -108.56
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 size_flags_horizontal = 4
 
 [node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer" groups=["UI_Element"]]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 text = "Sound"
 
 [node name="VSeparator3" type="VSeparator" parent="CanvasLayer/HBoxContainer"]
@@ -81,7 +84,7 @@ button_pressed = true
 
 [node name="VSeparator4" type="VSeparator" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 10
 theme_override_styles/separator = SubResource("StyleBoxEmpty_wtgyw")
 
 [node name="HSlider" type="HSlider" parent="CanvasLayer/HBoxContainer"]
@@ -95,14 +98,15 @@ value = 0.5
 
 [node name="vBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 offset_left = 578.0
-offset_top = 386.0
-offset_right = 687.0
-offset_bottom = 546.0
+offset_top = 364.0
+offset_right = 691.0
+offset_bottom = 555.0
 scale = Vector2(1.5954, 1.45097)
-theme_override_constants/separation = 16
+theme_override_constants/separation = 48
 
 [node name="Label" type="Label" parent="CanvasLayer/vBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 16
 text = "Brightness
 "
 
