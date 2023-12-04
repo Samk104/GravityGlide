@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://x5ryah5aryuw"]
+[gd_scene load_steps=9 format=3 uid="uid://x5ryah5aryuw"]
 
 [ext_resource type="Script" path="res://Scripts/Shop.gd" id="1_gbnhl"]
 [ext_resource type="Script" path="res://Scripts/ShopItemScript.gd" id="2_5mia0"]
@@ -6,12 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://cxy05ep3k1g7l" path="res://Assets/Items/NewSkin.png" id="3_ustxm"]
 [ext_resource type="Texture2D" uid="uid://bgrhrvx3f2otu" path="res://Assets/Items/RainbowTrail.png" id="4_6cob0"]
 [ext_resource type="Texture2D" uid="uid://cvn2xdr4bpqdf" path="res://Assets/Items/Glow.png" id="5_q2wde"]
+[ext_resource type="Theme" uid="uid://kcnk43rkyg48" path="res://Assets/GameTheme.tres" id="7_u6m6n"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inx3d"]
-content_margin_left = 10.0
-content_margin_top = 10.0
-content_margin_right = 10.0
-content_margin_bottom = 10.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40cef"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.698039, 0.643137, 0.831373, 1)
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -21,6 +23,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gbnhl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.137255, 0.294118, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -33,10 +44,12 @@ theme_override_constants/separation = 25
 alignment = 1
 
 [node name="Item1" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
+theme = ExtResource("7_u6m6n")
+theme_override_styles/panel = SubResource("StyleBoxFlat_40cef")
 script = ExtResource("2_5mia0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Item1"]
@@ -47,15 +60,15 @@ alignment = 1
 
 [node name="ItemTitle" type="Label" parent="HBoxContainer/Item1/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "New skin"
 horizontal_alignment = 1
 
 [node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item1/VBoxContainer"]
-custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 texture = ExtResource("3_ustxm")
-expand_mode = 1
-stretch_mode = 5
+expand_mode = 4
+stretch_mode = 4
 
 [node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item1/VBoxContainer"]
 layout_mode = 2
@@ -70,17 +83,21 @@ stretch_mode = 5
 
 [node name="StarPrice" type="Label" parent="HBoxContainer/Item1/VBoxContainer/Pricetag"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "0/8"
 
 [node name="ItemButton" type="Button" parent="HBoxContainer/Item1/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "Equip"
 
 [node name="Item2" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
+theme = ExtResource("7_u6m6n")
+theme_override_styles/panel = SubResource("StyleBoxFlat_40cef")
 script = ExtResource("2_5mia0")
 itemIndex = 1
 starPrice = 16
@@ -93,15 +110,15 @@ alignment = 1
 
 [node name="ItemTitle" type="Label" parent="HBoxContainer/Item2/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "Star Skin"
 horizontal_alignment = 1
 
 [node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item2/VBoxContainer"]
-custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 texture = ExtResource("2_j50ud")
-expand_mode = 1
-stretch_mode = 5
+expand_mode = 4
+stretch_mode = 4
 
 [node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item2/VBoxContainer"]
 layout_mode = 2
@@ -116,17 +133,21 @@ stretch_mode = 5
 
 [node name="StarPrice" type="Label" parent="HBoxContainer/Item2/VBoxContainer/Pricetag"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "0/8"
 
 [node name="ItemButton" type="Button" parent="HBoxContainer/Item2/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "Equip"
 
 [node name="Item3" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
+theme = ExtResource("7_u6m6n")
+theme_override_styles/panel = SubResource("StyleBoxFlat_40cef")
 script = ExtResource("2_5mia0")
 itemIndex = 2
 starPrice = 20
@@ -139,15 +160,15 @@ alignment = 1
 
 [node name="ItemTitle" type="Label" parent="HBoxContainer/Item3/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "Trail"
 horizontal_alignment = 1
 
 [node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item3/VBoxContainer"]
-custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 texture = ExtResource("4_6cob0")
-expand_mode = 1
-stretch_mode = 5
+expand_mode = 4
+stretch_mode = 4
 
 [node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item3/VBoxContainer"]
 layout_mode = 2
@@ -162,17 +183,21 @@ stretch_mode = 5
 
 [node name="StarPrice" type="Label" parent="HBoxContainer/Item3/VBoxContainer/Pricetag"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "0/8"
 
 [node name="ItemButton" type="Button" parent="HBoxContainer/Item3/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "Equip"
 
 [node name="Item4" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_inx3d")
+theme = ExtResource("7_u6m6n")
+theme_override_styles/panel = SubResource("StyleBoxFlat_40cef")
 script = ExtResource("2_5mia0")
 itemIndex = 3
 starPrice = 24
@@ -185,15 +210,15 @@ alignment = 1
 
 [node name="ItemTitle" type="Label" parent="HBoxContainer/Item4/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "Glow"
 horizontal_alignment = 1
 
 [node name="ItemImage" type="TextureRect" parent="HBoxContainer/Item4/VBoxContainer"]
-custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 texture = ExtResource("5_q2wde")
-expand_mode = 1
-stretch_mode = 5
+expand_mode = 4
+stretch_mode = 4
 
 [node name="Pricetag" type="HBoxContainer" parent="HBoxContainer/Item4/VBoxContainer"]
 layout_mode = 2
@@ -208,10 +233,12 @@ stretch_mode = 5
 
 [node name="StarPrice" type="Label" parent="HBoxContainer/Item4/VBoxContainer/Pricetag"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "0/8"
 
 [node name="ItemButton" type="Button" parent="HBoxContainer/Item4/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_u6m6n")
 text = "Equip"
 
 [node name="BackButton" type="Button" parent="."]
@@ -222,6 +249,7 @@ anchor_right = 1.0
 offset_left = -249.0
 offset_bottom = 93.0
 grow_horizontal = 0
+theme = ExtResource("7_u6m6n")
 text = "Back"
 
 [connection signal="pressed" from="HBoxContainer/Item1/VBoxContainer/ItemButton" to="HBoxContainer/Item1" method="onEquip"]
