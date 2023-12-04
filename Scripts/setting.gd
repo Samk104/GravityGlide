@@ -76,7 +76,7 @@ func _on_h_slider_value_changed(value):
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	
-	
+
 
 #func _on_text_decrease_pressed():
 #	#modify_text_size(-2.0
@@ -151,3 +151,6 @@ func _on_button_pressed():
 #
 #		# Reset font size to original size
 #		label.add_font_override("theme_override_font_sizes/font_size", original_font_size)
+
+
+
