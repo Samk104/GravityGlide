@@ -21,6 +21,7 @@ buses/default_bus_layout=""
 
 [autoload]
 
+GlobalWorldEnvironment="*res://Scenes/world_environment.tscn"
 GlobalAudio="*res://Scenes/GlobalAudio.tscn"
 
 [display]

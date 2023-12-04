@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxn4ph88l8xwf"]
+
+[ext_resource type="Script" path="res://Scripts/visualsSlider.gd" id="1_dt7ay"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_dt7ay")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 768.0
+offset_top = 381.0
+offset_right = 1344.0
+offset_bottom = 414.0
+max_value = 4.0
+step = 0.01
+value = 1.0
+
+[node name="contrast" type="HSlider" parent="."]
+offset_left = 768.0
+offset_top = 437.0
+offset_right = 1344.0
+offset_bottom = 473.0
+max_value = 4.0
+step = 0.01
+value = 1.0
+
+[node name="saturation" type="HSlider" parent="."]
+offset_left = 768.0
+offset_top = 501.0
+offset_right = 1344.0
+offset_bottom = 527.0
+max_value = 4.0
+step = 0.01
+value = 1.0
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="contrast" to="." method="_on_contrast_value_changed"]
+[connection signal="value_changed" from="saturation" to="." method="_on_saturation_value_changed"]

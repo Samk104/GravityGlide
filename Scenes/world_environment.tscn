@@ -1,6 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://swmrxs1vj86c"]
 
 [sub_resource type="Environment" id="Environment_xg6cm"]
+background_mode = 3
+adjustment_enabled = true
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_f182q"]
 
