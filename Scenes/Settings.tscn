@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsq2kd5o5w13c"]
+[gd_scene load_steps=4 format=3 uid="uid://bsq2kd5o5w13c"]
 
 [ext_resource type="Script" path="res://Scripts/setting.gd" id="1_3gtbu"]
+[ext_resource type="PackedScene" uid="uid://bxn4ph88l8xwf" path="res://Scenes/visualsSlider.tscn" id="2_nkwl2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wtgyw"]
 
@@ -57,8 +58,8 @@ anchor_top = 0.241
 anchor_right = 0.69
 anchor_bottom = 0.403
 offset_left = 23.96
-offset_top = -0.280012
-offset_right = -18.8001
+offset_top = -0.279999
+offset_right = 19.2
 offset_bottom = -15.24
 grow_horizontal = 2
 grow_vertical = 2
@@ -91,6 +92,32 @@ size_flags_vertical = 1
 max_value = 1.0
 step = 0.001
 value = 0.5
+
+[node name="vBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 578.0
+offset_top = 386.0
+offset_right = 687.0
+offset_bottom = 546.0
+scale = Vector2(1.5954, 1.45097)
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/vBoxContainer"]
+layout_mode = 2
+text = "Brightness
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer/vBoxContainer"]
+layout_mode = 2
+text = "Contrast"
+
+[node name="Label3" type="Label" parent="CanvasLayer/vBoxContainer"]
+layout_mode = 2
+text = "Saturation"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/vBoxContainer"]
+layout_mode = 2
+
+[node name="CanvasLayer" parent="CanvasLayer/vBoxContainer/HBoxContainer" instance=ExtResource("2_nkwl2")]
 
 [connection signal="pressed" from="CanvasLayer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="toggled" from="CanvasLayer/HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
