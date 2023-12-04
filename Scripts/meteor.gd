@@ -27,6 +27,4 @@ func _on_player_death_body_entered(body):
 		body.health -= 10
 		self.queue_free()
 		death()
-	else:
-		self.queue_free()
 	
