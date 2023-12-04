@@ -15,6 +15,8 @@ var isAudioOn: bool
 var _value
 var pathofdir ="res://Scenes/"
 var ready_called: bool = false 
+var previousAudioVolume: float
+
 
 
 
@@ -28,6 +30,10 @@ func _ready():
 	_audio_slider = $CanvasLayer/HBoxContainer/HSlider
 	bus_index = AudioServer.get_bus_index("Master")
 	MasterVolSlider.value=AudioServer.get_bus_volume_db(bus_index)
+	previousAudioVolume = MasterVolSlider.value  
+	print("This is from the ready func")
+	print(MasterVolSlider)
+	
 	
 	_enable_audio_feature()
 
@@ -54,11 +60,16 @@ func _enable_audio_feature():
 	_audio_slider.set_process_input(true)
 	_audio_slider.editable = true
 	_sound_text.modulate = Color(250, 250, 1)
+	
+	AudioServer.set_bus_volume_db(bus_index, linear_to_db(previousAudioVolume))
+
 	GlobalAudio.play_music()
 
 func _on_h_slider_value_changed(value):
 	
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(value))
+	print("values from slider")
+	print(value)
 	# Store the value for future use
 	_value = value
 
