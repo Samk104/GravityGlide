@@ -22,8 +22,8 @@ animations = [{
 size = Vector2(208, 854)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgebd"]
-radius = 32.0
-height = 114.764
+radius = 29.0245
+height = 79.5814
 
 [node name="meteor" type="CharacterBody2D"]
 script = ExtResource("1_7275u")
@@ -41,6 +41,7 @@ sprite_frames = SubResource("SpriteFrames_lwchf")
 animation = &"idle"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
 position = Vector2(-45, 372)
@@ -49,7 +50,7 @@ shape = SubResource("RectangleShape2D_xcjce")
 [node name="PlayerDeath" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeath"]
-position = Vector2(16, -8)
+position = Vector2(10, 5)
 rotation = 0.408407
 shape = SubResource("CapsuleShape2D_qgebd")
 
