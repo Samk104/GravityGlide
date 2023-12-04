@@ -2,7 +2,7 @@ extends RigidBody2D
 
 var health = 10
 var GravityStrength = 300
-var JUMP_VELOCITY = 600
+var JUMP_VELOCITY = 450
 #@onready var anim = get_node("AnimatedSprite2D")
 var grounded = true
 
