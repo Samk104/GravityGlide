@@ -17,9 +17,10 @@ func setUp(time : float, levelIndex : int, newNextLevel : String):
 	var ParTimes = Global.new().ParTimes
 	#Set stars, starPar
 	for i in range(3):
-		$Panel/VBoxContainer/StarTimes.get_child(i).text = formatTime(ParTimes[levelIndex][i])
+		var starText = $Panel/VBoxContainer/Stars.get_child(i).get_child(1)
+		starText.text = formatTime(ParTimes[levelIndex][i])
 		if (time > ParTimes[levelIndex][i]):
-			$Panel/VBoxContainer/Stars.get_child(i).modulate = Color(0.25, 0.25, 0.25)
+			starText.modulate = Color(0.25, 0.25, 0.25)
 	
 	#Set time
 	$Panel/VBoxContainer/Time.text = "Time Taken: %s" % formatTime(time)
@@ -60,6 +61,7 @@ func getStarCount(time : float, levelIndex : int):
 
 var levelToLoad := ""
 func loadLevel(level : String):
+	$Panel.visible = false
 	levelToLoad = level
 	var LS = preload("res://Scenes/loading_scene.tscn").instantiate()
 	add_child(LS)

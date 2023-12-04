@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xcjce"]
-size = Vector2(114, 854)
+size = Vector2(147, 854)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qgebd"]
 radius = 32.0
@@ -43,7 +43,7 @@ animation = &"idle"
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(2, 372)
+position = Vector2(-14.5, 372)
 shape = SubResource("RectangleShape2D_xcjce")
 
 [node name="PlayerDeath" type="Area2D" parent="."]

@@ -74067,19 +74067,19 @@ position = Vector2(-2486, 274)
 shape = SubResource("RectangleShape2D_2du61")
 
 [node name="meteor" parent="." instance=ExtResource("8_unjkh")]
-position = Vector2(2520, 8)
+position = Vector2(2499, -46)
 
 [node name="meteor2" parent="." instance=ExtResource("8_unjkh")]
-position = Vector2(5602, 17)
+position = Vector2(5603, -78)
 
 [node name="meteor3" parent="." instance=ExtResource("8_unjkh")]
-position = Vector2(5054, -3)
+position = Vector2(5037, -77)
 
 [node name="meteor5" parent="." instance=ExtResource("8_unjkh")]
-position = Vector2(4094, 95)
+position = Vector2(4097, -31)
 
 [node name="meteor4" parent="." instance=ExtResource("8_unjkh")]
-position = Vector2(1509, 143)
+position = Vector2(1511, 4)
 
 [connection signal="body_entered" from="LevelComplete" to="." method="onLevelClear"]
 [connection signal="body_entered" from="EndGame2" to="." method="onPitfall"]
