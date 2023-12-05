@@ -105,15 +105,6 @@ text = "Store"
 
 [node name="BG" parent="." instance=ExtResource("1_wdumw")]
 
-[node name="Currency" type="Label" parent="."]
-layout_mode = 0
-offset_left = -368.0
-offset_top = -277.0
-offset_right = -48.0
-offset_bottom = -243.0
-theme_override_font_sizes/font_size = 24
-text = "Stars:"
-
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxContainer/contGame" to="." method="_on_cont_game_pressed"]
 [connection signal="pressed" from="MarginContainer/BoxContainer/Quit" to="." method="_on_quit_pressed"]
